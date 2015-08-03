@@ -105,6 +105,11 @@ function process() {
     hmp.fillStyle = "white";
     hmp.fillRect(0, 0, cs, cs);
     var colors = [ "red", "green", "blue", "black", "magenta" ];
+    walks.sort(function(a, b) {
+        if (a.length > b.length)  return -1;
+        else if (b.length > a.length) return 1;
+        else return 0;
+    });
     for (var i = 0; i < walks.length && i < 5; ++i) {
         hmp.strokeStyle = colors[i];
         hmp.beginPath();
