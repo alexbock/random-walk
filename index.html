@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Random Walk Simulator</title>
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" type="text/css" href="rw.css">
+        <script type="text/javascript" src="rw.js"></script>
+    </head>
+    <body>
+        <div id="wrapper">
+            <h1>Random Walk Simulator</h1>
+            <div id="controls">
+                <div id="controlsInner">
+                    <span class="nowrap">Dimensions: <input id="inDimensions" type="number" min="1" max="10" value="2"></span>
+                    <br>
+                    <span class="nowrap">Steps: <input id="inSteps" type="number" min="1" max="1000000" value="400"></span>
+                    <br>
+                    <span class="nowrap">Trials: <input id="inTrials" type="number" min="1" max="1000" value="1000"></span>
+                    <br>
+                    <span class="nowrap">Viewport Quadrant Size: <input id="inQuadrantSize" type="number" min="10" max="1000" value="60"></span>
+                </div>
+                <br>
+                <input type="button" id="refresh" value="Rewalk">
+            </div>
+            <div class="card">
+                <h2>XY Heatmap</h2>
+                <canvas id="heatmapCanvas" width="800px" height="800px">
+                    Your browser does not support HTML5 canvas.
+                </canvas>
+                <br>
+                Darker regions were visited more often.
+            </div>
+            <div class="card">
+                <h2>Paths</h2>
+                <canvas id="pathsCanvas" width="800px" height="800px">
+                    Your browser does not support HTML5 canvas.
+                </canvas>
+                <br>
+                Only the first 5 trials will be shown.
+            </div>
+            <div class="card">
+                <h2>Data</h2>
+                <span id="outTrialsReturned">X</span> of <span id="outTrialsTotal">Y</span>
+                trials returned to the origin (<span id="outTrialsReturnedPercent">Z</span>%).
+            </div>
+        </div>
+    </body>
+</html>

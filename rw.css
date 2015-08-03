@@ -1,0 +1,38 @@
+body {
+    font-family: -apple-system, sans-serif;
+}
+
+.card {
+    max-width: 400px;
+    border: 1px solid black;
+    padding: 1em;
+    border-radius: 2px;
+    margin: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1, h2 {
+    margin: 0;
+    margin-bottom: 0.2em;
+    text-align: center;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+canvas {
+    width: 100%;
+    height: 100%;
+    border: 1px dotted black;
+}
+
+#controls {
+    text-align: center;
+}
+
+#controlsInner {
+    display: inline-block;
+    text-align: left;
+}
